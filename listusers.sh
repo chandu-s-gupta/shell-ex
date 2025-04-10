@@ -1,5 +1,13 @@
 #!/bin/bash
 
+#########
+#author chandu
+
+#this script returns the users with pull requests access to a git repo
+########
+
+helper()
+
 # GitHub API URL
 API_URL="https://api.github.com"
 
@@ -36,6 +44,11 @@ function list_users_with_read_access {
     fi
 }
 
+function helper {
+
+if [$# ne 2] ; then
+echo "please enter orgzn name and repo name in proper format"
+}
 # Main script
 
 echo "Listing users with read access to ${REPO_OWNER}/${REPO_NAME}..."
